@@ -14,7 +14,7 @@ def read_data(participant_nums, type):
     participants = []
     all_avg = []
     for i in participant_nums:
-        all_flat = sorted(glob.glob(os.path.join(cwd, f"../data/P{i}*{type}*csv")))
+        all_flat = sorted(glob.glob(os.path.join(cwd, f"../data/P{i}_*{type}*csv")))
         #     all_pillow = sorted(glob.glob(os.path.join(cwd, f"data/P{i}*PILLOW*.csv")))
         gestures = {}
         for f in sorted(all_flat):
@@ -30,8 +30,8 @@ def read_data(participant_nums, type):
     return participants
 
 
-def main(folder, participant_nums):
-    participants = read_data(participant_nums, "FLAT")
+def main(folder, participant_nums, type):
+    participants = read_data(participant_nums, type)
     labels = ascii_to_gesture.values()
     to_write = dict()
     for l in labels:
@@ -54,4 +54,4 @@ def main(folder, participant_nums):
 
 if __name__ == "__main__":
     # to run all participants use range(1, 14) for second parameter
-    main("video_data_1", [1])
+    main("video_data_1", [1], "FLAT")

@@ -16,7 +16,7 @@ def read_data(participant_nums, type):
     participants = []
     all_avg = []
     for i in participant_nums:
-        all_flat = sorted(glob.glob(os.path.join(cwd, f"../data/P{i}*{type}*csv")))
+        all_flat = sorted(glob.glob(os.path.join(cwd, f"../data/P{i}_*{type}*csv")))
         #     all_pillow = sorted(glob.glob(os.path.join(cwd, f"data/P{i}*PILLOW*.csv")))
         gestures = {}
         for f in sorted(all_flat):
@@ -92,9 +92,9 @@ def chop(matrix, length=120, num_samples=100):
     return answer
 
 
-def main(folder, participant_nums):
+def main(folder, participant_nums, type):
     os.mkdir(folder)
-    participants = read_data(participant_nums, "FLAT")
+    participants = read_data(participant_nums, type)
     counter = 00
     for p in participants:
         for key, val in p.gestures.items():
@@ -131,4 +131,4 @@ def main(folder, participant_nums):
 
 if __name__ == "__main__":
     # to run all participants use range(1, 14) for second parameter
-    main("video_data_D", range(1,13))
+    main("video_data_D", range(1,13), "FLAT")

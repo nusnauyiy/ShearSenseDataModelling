@@ -1,4 +1,4 @@
-from modelling.util import ascii_to_gesture
+from modelling2.util import ascii_to_gesture
 
 SEED_CONSTANT = 23
 CLASSES_LIST = ascii_to_gesture.values()

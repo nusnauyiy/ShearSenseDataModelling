@@ -145,6 +145,9 @@ While the two versions of `data_processor` have somewhat different implementatio
 1. data augmentation by sampling overlapping chunk of the video as datasets.
 1. video files are saved in the specified directories, ready for model traning.
 
+### Comments on Code Quality
+The data processing code used for our project had a mixed level of code quality. While the data abstraction was well-formatted, the actual data processing code was messy and required refactoring. This made the code less customizable as compared to the data collection software. Nonetheless, the code was still relatively easy to set up since it didn't involve hardware. As we are still trying to find the optimal visualization and representation of the data, the code will continue to be developed and improved over the summer.
+
 ## CNN Model (1st iteration)
 ### Credits
 The first-iteration CNN model code is adapted from the following project: [Video Classificaiton by GuyKabiri](https://github.com/GuyKabiri/Video-Classification). It uses a Recurrent Neural Network architecture, which maintains a "meomory" of prevous seen input and is good for processing time-series data.

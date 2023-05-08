@@ -172,7 +172,7 @@ While the two versions of `data_processor` have somewhat different implementatio
 
 
 ### Comments on Code Quality
-The data processing code used for our project had a mixed level of code quality. While the data abstraction was well-formatted, the actual data processing code was messy and required refactoring. This made the code less customizable as compared to the data collection software. Nonetheless, the code was still relatively easy to set up since it didn't involve hardware. As we are still trying to find the optimal visualization and representation of the data, the code will continue to be developed and improved over the summer.
+The data processing code used for our project had a mixed level of code quality. While the data abstraction was well-formatted, the actual data processing code required refactoring. This is because quite a bit of hard-coding is required in the data processing code to convert raw data to our specified data structures, and no refactoring has been done due to the time constraint. As a result, the code is less customizable as compared to the data collection software, and may require a few changes if the format of data collected changes. Nonetheless, the pipeline is still relatively easy to set up since it didn't involve hardware. As we are still trying to find the optimal visualization and representation of the data, the code will continue to be developed and improved.
 
 
 ## CNN Model (1st iteration)
